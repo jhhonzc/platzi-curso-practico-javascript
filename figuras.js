@@ -43,6 +43,55 @@ function areaTriangulo(base, altura) {
 }
 console.log("El área del triángulo es: " + areaTriangulo + "cmˆ2");
 
+// Reto: Calcular la altura de un triangulo
+// Soluciòn de: Juan David Castro (Profe)
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+  if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+      console.error("Los lados a y b no son iguales");
+  } else {
+      const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+      const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+      const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+      const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+
+      const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+      const trianguloGrandeAltura = trianguloPequenoLadoA;
+      return trianguloGrandeAltura;
+  }
+}
+
+// Con potencias **: 
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+  if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+      console.error("Los lados a y b no son iguales");
+  } else {
+      const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+      const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+      const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB**2 ;
+      const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase**2;
+
+      const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+      const trianguloGrandeAltura = trianguloPequenoLadoA;
+      return trianguloGrandeAltura;
+  }
+}
+
+// Solucion: matias bravo
+// Modificado: se elimina alerts y else
+function altura(lado1, lado2, base){
+  if(lado1 === lado2 && lado1 != base){
+      console.log('Triangulo Isoceles')
+      const altura = Math.sqrt(lado1**2 - base**2/ 4)
+      console.log(altura)
+  }
+}
+
+
+
 console.groupEnd();
 
 // Código del círculo
